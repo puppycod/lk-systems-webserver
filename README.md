@@ -4,15 +4,17 @@ A local Home Assistant custom integration for LK Webserver and LK ICS.2 floor he
 
 This project started after we found a Home Assistant setup for LK ICS.2 over Modbus RTU and couldn't find an integration that used the LK Webserver's local interface. We wanted to use the Webserver already connected to the heating system, so we mapped its local HTTP requests. The existing Modbus work was the starting point for that search. [Modbus setup by astrandb](https://github.com/astrandb/lk-systems-floor) · [Home Assistant Community discussion](https://community.home-assistant.io/t/lk-systems-floor-heating-ongoing-help-wouldn-t-hurt/292646)
 
-## Install with HACS
+## Install with Home Assistant Marketplace
 
-1. Open **HACS → ⋮ → Custom repositories**.
-2. Add `https://github.com/puppycod/lk-systems-webserver` with type **Integration**.
-3. Open **LK Systems Webserver** in HACS and select **Download**.
-4. Restart Home Assistant.
-5. For a new installation, open **Settings → Devices & services → Add integration → LK Systems Webserver** and enter the local Webserver address and credentials.
+Home Assistant 2026.11 includes the Marketplace, which replaces HACS. [Home Assistant Marketplace documentation](https://www.home-assistant.io/integrations/marketplace/)
 
-If you previously installed the integration manually, HACS downloads it to the same directory. Restart Home Assistant and use the existing integration entry.
+1. Open **Settings → Marketplace → Add from link**.
+2. Enter `https://github.com/puppycod/lk-systems-webserver` and select **Add**. Connect GitHub if prompted. If asked for the type, select **Integration**.
+3. Open **LK Systems Webserver** in the Marketplace and select **Install**.
+4. Restart Home Assistant to load the installed integration.
+5. For a new setup, open **Settings → Devices & services → Add integration → LK Systems Webserver** and enter the local Webserver address and credentials.
+
+If you previously installed the integration manually, the Marketplace installs it to the same directory. After restarting Home Assistant, use the existing integration entry. Future releases appear under **Settings → Updates**.
 
 ## Install manually
 
