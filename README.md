@@ -1,6 +1,6 @@
 # LK Systems Webserver
 
-A local Home Assistant custom integration for LK Webserver and LK ICS.2 floor heating. The protocol was investigated on firmware 3.1.850. Home Assistant communicates with the Webserver using its local HTTP interface.
+A local Home Assistant custom integration for LK Webserver and LK ICS.2 floor heating. Tested with the white LK Webserver connected to an LK ICS.2 system, running firmware 3.1.850. Home Assistant communicates with the Webserver using its local HTTP interface.
 
 This project started after we found a Home Assistant setup for LK ICS.2 over Modbus RTU and couldn't find an integration that used the LK Webserver's local interface. We wanted to use the Webserver already connected to the heating system, so we mapped its local HTTP requests. The existing Modbus work was the starting point for that search. [Modbus setup by astrandb](https://github.com/astrandb/lk-systems-floor) · [Home Assistant Community discussion](https://community.home-assistant.io/t/lk-systems-floor-heating-ongoing-help-wouldn-t-hurt/292646)
 
