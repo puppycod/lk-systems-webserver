@@ -4,6 +4,8 @@ A local Home Assistant custom integration for LK Webserver and LK ICS.2 floor he
 
 This project started after we found a Home Assistant setup for LK ICS.2 over Modbus RTU and couldn't find an integration that used the LK Webserver's local interface. We wanted to use the Webserver already connected to the heating system, so we mapped its local HTTP requests. The existing Modbus work was the starting point for that search. [Modbus setup by astrandb](https://github.com/astrandb/lk-systems-floor) · [Home Assistant Community discussion](https://community.home-assistant.io/t/lk-systems-floor-heating-ongoing-help-wouldn-t-hurt/292646)
 
+This independent integration and its author are not affiliated with, endorsed by, or supported by LK Systems. Use it at your own risk.
+
 ## Install with Home Assistant Marketplace
 
 Home Assistant 2026.11 includes the Marketplace, which replaces HACS. [Home Assistant Marketplace documentation](https://www.home-assistant.io/integrations/marketplace/)
