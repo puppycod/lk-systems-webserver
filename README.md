@@ -6,6 +6,8 @@ This project started after we found a Home Assistant setup for LK ICS.2 over Mod
 
 This independent integration and its author are not affiliated with, endorsed by, or supported by LK Systems. Use it at your own risk.
 
+For hardware setup and troubleshooting, see the manufacturer's documentation. [LK Systems ICS.2 support](https://www.lksystems.se/sv/produktsystem/golvvarme/support-for-golvvarmesystem/support-for-lk-ics.2/) · [LK Webserver installation manual (English)](https://www.lksystems.se/download/75166/en.33.c.190_lk-webserver.pdf?1750570618281=)
+
 ## Install with Home Assistant Marketplace
 
 Home Assistant 2026.11 includes the Marketplace, which replaces HACS. [Home Assistant Marketplace documentation](https://www.home-assistant.io/integrations/marketplace/)
