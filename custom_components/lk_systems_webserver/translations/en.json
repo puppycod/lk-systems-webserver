@@ -1,0 +1,131 @@
+{
+  "config": {
+    "step": {
+      "reconfigure": {
+        "title": "Update password",
+        "description": "Enter the current password for this Webserver.",
+        "data": {
+          "password": "New password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate",
+        "description": "The Webserver rejected the stored credentials. Enter its current password.",
+        "data": {
+          "password": "New password"
+        }
+      },
+      "user": {
+        "title": "LK Systems Webserver",
+        "description": "Enter the local address and credentials of your Webserver.",
+        "data": {
+          "host": "Local address",
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The Webserver rejected the username or password.",
+      "cannot_connect": "Could not read the Webserver.",
+      "invalid_host": "Enter a host name or HTTP address."
+    },
+    "abort": {
+      "wrong_device": "The address belongs to a different LK Webserver.",
+      "already_configured": "This Webserver is already configured."
+    }
+  },
+  "exceptions": {
+    "holiday_end_required": {
+      "message": "Set the planned holiday end date before selecting Holiday."
+    }
+  },
+  "entity": {
+    "select": {
+      "requested_system_mode": {
+        "name": "System mode control",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Holiday",
+          "setback": "Setback"
+        }
+      }
+    },
+    "date": {
+      "holiday_end": {
+        "name": "Planned holiday end date"
+      }
+    },
+    "sensor": {
+      "holiday_end_estimate": {
+        "name": "Estimated holiday end date"
+      },
+      "battery": {
+        "name": "Battery"
+      },
+      "link_quality": {
+        "name": "Radio link quality"
+      },
+      "connection": {
+        "name": "Connection status",
+        "state": {
+          "connected": "Connected",
+          "degraded": "Connection degraded",
+          "disconnected": "Disconnected"
+        }
+      },
+      "last_success": {
+        "name": "Last successful read"
+      },
+      "system_mode": {
+        "name": "System mode",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Holiday",
+          "setback": "Setback"
+        }
+      }
+    },
+    "binary_sensor": {
+      "pump_state": {
+        "name": "Pump relay"
+      },
+      "boiler_state": {
+        "name": "Boiler relay"
+      }
+    },
+    "button": {
+      "sync_clock": {
+        "name": "Sync clock"
+      }
+    },
+    "switch": {
+      "week_program_enable": {
+        "name": "Weekly program"
+      },
+      "adaptive_enable": {
+        "name": "Adaptive start"
+      },
+      "backlight_enable": {
+        "name": "Backlight"
+      },
+      "keylock_enable": {
+        "name": "Key lock"
+      }
+    },
+    "number": {
+      "comfort_deg": {
+        "name": "Comfort temperature"
+      },
+      "economy_deg": {
+        "name": "Economy temperature"
+      },
+      "holiday_deg": {
+        "name": "Holiday temperature"
+      },
+      "setback_deg": {
+        "name": "Setback temperature"
+      }
+    }
+  }
+}

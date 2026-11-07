@@ -1,0 +1,131 @@
+{
+  "config": {
+    "step": {
+      "reconfigure": {
+        "title": "Päivitä salasana",
+        "description": "Anna tämän Webserverin nykyinen salasana.",
+        "data": {
+          "password": "Uusi salasana"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Tunnistaudu uudelleen",
+        "description": "Webserver hylkäsi tallennetut kirjautumistiedot. Anna Webserverin nykyinen salasana.",
+        "data": {
+          "password": "Uusi salasana"
+        }
+      },
+      "user": {
+        "title": "LK Systems Webserver",
+        "description": "Anna Webserverin paikallinen osoite ja kirjautumistiedot.",
+        "data": {
+          "host": "Paikallinen osoite",
+          "username": "Käyttäjätunnus",
+          "password": "Salasana"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Webserver hylkäsi käyttäjätunnuksen tai salasanan.",
+      "cannot_connect": "Webserverin tietoja ei saatu luettua.",
+      "invalid_host": "Anna palvelimen nimi tai HTTP-osoite."
+    },
+    "abort": {
+      "wrong_device": "Osoitteessa vastasi toinen LK Webserver.",
+      "already_configured": "Tämä Webserver on jo lisätty."
+    }
+  },
+  "exceptions": {
+    "holiday_end_required": {
+      "message": "Aseta loman päättymispäivä ennen Loma-tilan valitsemista."
+    }
+  },
+  "entity": {
+    "select": {
+      "requested_system_mode": {
+        "name": "Järjestelmän tilan ohjaus",
+        "state": {
+          "normal": "Normaali",
+          "holiday": "Loma",
+          "setback": "Pudotus"
+        }
+      }
+    },
+    "date": {
+      "holiday_end": {
+        "name": "Suunniteltu loman päättymispäivä"
+      }
+    },
+    "sensor": {
+      "holiday_end_estimate": {
+        "name": "Loman arvioitu päättymispäivä"
+      },
+      "battery": {
+        "name": "Paristotaso"
+      },
+      "link_quality": {
+        "name": "Radiolinkin laatu"
+      },
+      "connection": {
+        "name": "Yhteystila",
+        "state": {
+          "connected": "Yhteys kunnossa",
+          "degraded": "Yhteyshäiriö",
+          "disconnected": "Ei yhteyttä"
+        }
+      },
+      "last_success": {
+        "name": "Viimeisin onnistunut luku"
+      },
+      "system_mode": {
+        "name": "Järjestelmätila",
+        "state": {
+          "normal": "Normaali",
+          "holiday": "Loma",
+          "setback": "Pudotus"
+        }
+      }
+    },
+    "binary_sensor": {
+      "pump_state": {
+        "name": "Pumpun rele"
+      },
+      "boiler_state": {
+        "name": "Kattilan rele"
+      }
+    },
+    "button": {
+      "sync_clock": {
+        "name": "Synkronoi kello"
+      }
+    },
+    "switch": {
+      "week_program_enable": {
+        "name": "Viikko-ohjelma"
+      },
+      "adaptive_enable": {
+        "name": "Mukautuva käynnistys"
+      },
+      "backlight_enable": {
+        "name": "Taustavalo"
+      },
+      "keylock_enable": {
+        "name": "Näppäinlukko"
+      }
+    },
+    "number": {
+      "comfort_deg": {
+        "name": "Mukavuuslämpötila"
+      },
+      "economy_deg": {
+        "name": "Säästölämpötila"
+      },
+      "holiday_deg": {
+        "name": "Lomalämpötila"
+      },
+      "setback_deg": {
+        "name": "Pudotuslämpötila"
+      }
+    }
+  }
+}
