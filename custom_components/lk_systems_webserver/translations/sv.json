@@ -1,0 +1,140 @@
+{
+  "config": {
+    "step": {
+      "reconfigure": {
+        "title": "Uppdatera lösenord",
+        "description": "Ange webbserverns aktuella lösenord.",
+        "data": {
+          "password": "Nytt lösenord"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Autentisera på nytt",
+        "description": "Webbservern avvisade de sparade inloggningsuppgifterna. Ange det aktuella lösenordet.",
+        "data": {
+          "password": "Nytt lösenord"
+        }
+      },
+      "user": {
+        "title": "LK Systems Webserver",
+        "description": "Ange webbserverns lokala adress och inloggningsuppgifter.",
+        "data": {
+          "host": "Lokal adress",
+          "username": "Användarnamn",
+          "password": "Lösenord"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Webbservern avvisade användarnamnet eller lösenordet.",
+      "cannot_connect": "Det gick inte att läsa data från webbservern.",
+      "invalid_host": "Ange ett värdnamn eller en HTTP-adress."
+    },
+    "abort": {
+      "wrong_device": "Adressen tillhör en annan LK Webserver.",
+      "already_configured": "Den här webbservern har redan konfigurerats."
+    }
+  },
+  "exceptions": {
+    "holiday_end_required": {
+      "message": "Ange semesterns slutdatum innan du väljer Semester."
+    }
+  },
+  "entity": {
+    "select": {
+      "requested_system_mode": {
+        "name": "Styrning av systemläge",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Semester",
+          "setback": "Temperatursänkning"
+        }
+      }
+    },
+    "date": {
+      "holiday_end": {
+        "name": "Planerat slutdatum för semester"
+      }
+    },
+    "sensor": {
+      "room_temperature": {
+        "name": "Rumstemperatur"
+      },
+      "target_temperature": {
+        "name": "Börtemperatur"
+      },
+      "holiday_end_estimate": {
+        "name": "Beräknat slutdatum för semester"
+      },
+      "battery": {
+        "name": "Batteri"
+      },
+      "link_quality": {
+        "name": "Radiolänkens kvalitet"
+      },
+      "connection": {
+        "name": "Anslutningsstatus",
+        "state": {
+          "connected": "Ansluten",
+          "degraded": "Anslutningsproblem",
+          "disconnected": "Frånkopplad"
+        }
+      },
+      "last_success": {
+        "name": "Senaste lyckade avläsning"
+      },
+      "system_mode": {
+        "name": "Systemläge",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Semester",
+          "setback": "Temperatursänkning"
+        }
+      }
+    },
+    "binary_sensor": {
+      "heating_demand": {
+        "name": "Värmebehov"
+      },
+      "pump_state": {
+        "name": "Pumprelä"
+      },
+      "boiler_state": {
+        "name": "Pannrelä"
+      }
+    },
+    "button": {
+      "sync_clock": {
+        "name": "Synkronisera klockan"
+      }
+    },
+    "switch": {
+      "week_program_enable": {
+        "name": "Veckoprogram"
+      },
+      "adaptive_enable": {
+        "name": "Adaptiv start"
+      },
+      "backlight_enable": {
+        "name": "Bakgrundsbelysning"
+      },
+      "keylock_enable": {
+        "name": "Knapplås"
+      }
+    },
+    "number": {
+      "comfort_deg": {
+        "name": "Komforttemperatur"
+      },
+      "economy_deg": {
+        "name": "Ekonomitemperatur"
+      },
+      "holiday_deg": {
+        "name": "Semestertemperatur"
+      },
+      "setback_deg": {
+        "name": "Sänkningstemperatur"
+      }
+    }
+  }
+}

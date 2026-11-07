@@ -26,7 +26,7 @@ If you previously installed the integration manually, the Marketplace installs i
 
 Minimum Home Assistant Core version: **2026.11.0**.
 
-The panel content follows the Home Assistant profile language. Finnish is available as `fi` and English is the fallback. The sidebar label follows the Home Assistant system language.
+The panel and integration are available in English, Finnish, Swedish and Norwegian Bokmål. The panel content follows the Home Assistant profile language. Home Assistant uses a shared sidebar label for custom panels, so this label follows the system language.
 
 To upgrade an existing installation, replace the contents of its `custom_components/lk_systems_webserver` directory and restart Home Assistant. The existing climate entity IDs and settings are retained.
 
@@ -37,6 +37,8 @@ Change the password on the LK Webserver first. In Home Assistant, open **Setting
 ## Home Assistant entities
 
 Each thermostat device has a climate entity, battery and radio link diagnostics, switches for the weekly program, adaptive start, backlight and key lock, and number entities for Comfort, Economy, Holiday and Setback temperatures. The radio value uses the LK scale.
+
+Each thermostat also exposes read-only room temperature, target temperature and heating demand entities for dashboards and automations. Use the climate entity to change the target.
 
 The LK Systems Webserver device has connection status, the time of the last successful read, effective system mode, reported pump and boiler relay states, and a clock sync button. Thermostat devices are linked to this hub in the device registry. The panel provides the week editor, extended room settings and system mode controls.
 
@@ -67,3 +69,5 @@ Floor sensor control and LK WSS are outside this preview. The connection indicat
 5. Check the connection indicator and both panel languages.
 
 The local HTTP login should be used on a trusted network. Keep the Webserver credentials in the Home Assistant setup form and out of repository files.
+
+

@@ -57,6 +57,12 @@
       }
     },
     "sensor": {
+      "room_temperature": {
+        "name": "Room temperature"
+      },
+      "target_temperature": {
+        "name": "Target temperature"
+      },
       "holiday_end_estimate": {
         "name": "Estimated holiday end date"
       },
@@ -87,6 +93,9 @@
       }
     },
     "binary_sensor": {
+      "heating_demand": {
+        "name": "Heating demand"
+      },
       "pump_state": {
         "name": "Pump relay"
       },

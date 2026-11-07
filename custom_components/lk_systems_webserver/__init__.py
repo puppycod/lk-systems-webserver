@@ -16,6 +16,7 @@ from .coordinator import LKCoordinator
 DOMAIN = "lk_systems_webserver"
 PANEL = "lk-systems-webserver"
 ASSETS = "/lk_systems_webserver_static"
+SIDEBAR_TITLES = {"en": "Floor Heating", "fi": "Lattialämmitys", "sv": "Golvvärme", "nb": "Gulvvarme"}
 LOGGER = logging.getLogger(__name__)
 PLATFORMS = ("binary_sensor", "button", "climate", "date", "number", "select", "sensor", "switch")
 
@@ -48,10 +49,11 @@ async def async_setup_entry(hass, entry):
     coordinator.hub_device_id = hub.id
     entries = hass.data[DOMAIN]
     if not entries:
+        language = hass.config.language.lower().replace("_", "-").split("-")[0]
         await panel_custom.async_register_panel(
             hass, frontend_url_path=PANEL, webcomponent_name=PANEL,
-            sidebar_title="Lattialämmitys" if hass.config.language == "fi" else "Floor Heating",
-            sidebar_icon="mdi:heating-coil", module_url=f"{ASSETS}/panel.js?v=0.3.1",
+            sidebar_title=SIDEBAR_TITLES.get("nb" if language == "no" else language, SIDEBAR_TITLES["en"]),
+            sidebar_icon="mdi:heating-coil", module_url=f"{ASSETS}/panel.js?v=0.4.0",
             require_admin=True,
         )
     entries[entry.entry_id] = coordinator

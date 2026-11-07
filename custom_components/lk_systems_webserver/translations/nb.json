@@ -1,0 +1,140 @@
+{
+  "config": {
+    "step": {
+      "reconfigure": {
+        "title": "Oppdater passord",
+        "description": "Skriv inn det gjeldende passordet for webserveren.",
+        "data": {
+          "password": "Nytt passord"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Autentiser på nytt",
+        "description": "Webserveren avviste de lagrede påloggingsopplysningene. Skriv inn gjeldende passord.",
+        "data": {
+          "password": "Nytt passord"
+        }
+      },
+      "user": {
+        "title": "LK Systems Webserver",
+        "description": "Skriv inn webserverens lokale adresse og påloggingsopplysninger.",
+        "data": {
+          "host": "Lokal adresse",
+          "username": "Brukernavn",
+          "password": "Passord"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Webserveren avviste brukernavnet eller passordet.",
+      "cannot_connect": "Kunne ikke lese data fra webserveren.",
+      "invalid_host": "Skriv inn et vertsnavn eller en HTTP-adresse."
+    },
+    "abort": {
+      "wrong_device": "Adressen tilhører en annen LK Webserver.",
+      "already_configured": "Denne webserveren er allerede konfigurert."
+    }
+  },
+  "exceptions": {
+    "holiday_end_required": {
+      "message": "Angi sluttdato for ferien før du velger Ferie."
+    }
+  },
+  "entity": {
+    "select": {
+      "requested_system_mode": {
+        "name": "Styring av systemmodus",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Ferie",
+          "setback": "Temperatursenking"
+        }
+      }
+    },
+    "date": {
+      "holiday_end": {
+        "name": "Planlagt sluttdato for ferie"
+      }
+    },
+    "sensor": {
+      "room_temperature": {
+        "name": "Romtemperatur"
+      },
+      "target_temperature": {
+        "name": "Ønsket temperatur"
+      },
+      "holiday_end_estimate": {
+        "name": "Beregnet sluttdato for ferie"
+      },
+      "battery": {
+        "name": "Batteri"
+      },
+      "link_quality": {
+        "name": "Radiolinkkvalitet"
+      },
+      "connection": {
+        "name": "Tilkoblingsstatus",
+        "state": {
+          "connected": "Tilkoblet",
+          "degraded": "Tilkoblingsproblemer",
+          "disconnected": "Frakoblet"
+        }
+      },
+      "last_success": {
+        "name": "Siste vellykkede avlesning"
+      },
+      "system_mode": {
+        "name": "Systemmodus",
+        "state": {
+          "normal": "Normal",
+          "holiday": "Ferie",
+          "setback": "Temperatursenking"
+        }
+      }
+    },
+    "binary_sensor": {
+      "heating_demand": {
+        "name": "Varmebehov"
+      },
+      "pump_state": {
+        "name": "Pumperelé"
+      },
+      "boiler_state": {
+        "name": "Kjelrelé"
+      }
+    },
+    "button": {
+      "sync_clock": {
+        "name": "Synkroniser klokken"
+      }
+    },
+    "switch": {
+      "week_program_enable": {
+        "name": "Ukeprogram"
+      },
+      "adaptive_enable": {
+        "name": "Adaptiv start"
+      },
+      "backlight_enable": {
+        "name": "Bakgrunnsbelysning"
+      },
+      "keylock_enable": {
+        "name": "Tastelås"
+      }
+    },
+    "number": {
+      "comfort_deg": {
+        "name": "Komforttemperatur"
+      },
+      "economy_deg": {
+        "name": "Økonomitemperatur"
+      },
+      "holiday_deg": {
+        "name": "Ferietemperatur"
+      },
+      "setback_deg": {
+        "name": "Senket temperatur"
+      }
+    }
+  }
+}

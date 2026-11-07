@@ -57,6 +57,12 @@
       }
     },
     "sensor": {
+      "room_temperature": {
+        "name": "Huonelämpötila"
+      },
+      "target_temperature": {
+        "name": "Tavoitelämpötila"
+      },
       "holiday_end_estimate": {
         "name": "Loman arvioitu päättymispäivä"
       },
@@ -87,6 +93,9 @@
       }
     },
     "binary_sensor": {
+      "heating_demand": {
+        "name": "Lämmityspyyntö"
+      },
       "pump_state": {
         "name": "Pumpun rele"
       },

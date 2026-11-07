@@ -59,6 +59,64 @@ const labels = {
     bypass_mode: ["Ohitus", "Voi avata tämän piirin virtauksen ylläpitämiseksi muiden piirien sulkeutuessa."],
     bypassOptions: ["Pois", "Jatkuva", "Ajastettu"],
   },
+  sv: {
+    title: "Golvvärme", connected: "Ansluten", degraded: "Anslutningsproblem",
+    offline: "Frånkopplad", last: "Senaste lyckade avläsning", unknown: "Okänt",
+    system: "System", normal: "Normal", holiday: "Semester", setback: "Temperatursänkning",
+    clock: "LK:s klocka", sync: "Synkronisera klockan", apply: "Aktivera läge", end: "Semesterns slutdatum",
+    pump: "Pumprelä", boiler: "Pannrelä", on: "På", off: "Av",
+    measured: "Rumstemperatur", target: "Börtemperatur", heat: "Värmer",
+    idle: "Inget värmebehov", battery: "Batteri", radio: "Radiolänkens kvalitet", settings: "Rumsinställningar",
+    schedule: "Veckoprogram", manual: "Tillfällig manuell styrning", save: "Spara",
+    noRooms: "Inga aktiva termostater.", noData: "Väntar på data från LK Webserver.",
+    waiting: "Sparar…", saved: "Sparat och verifierat.", error: "Åtgärden misslyckades.",
+    dayHelp: "Ange start och slut för varje ekonomiperiod. Lämna båda fälten tomma för att ta bort en period. Använd 24:00 för midnatt vid dygnets slut.",
+    holidayHelp: "Välj ett datum 1–99 dagar framåt. Läget påverkar alla rum.",
+    setbackHelp: "Använder rummens sänkningstemperaturer tills normalläget återställs.",
+    days: ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"],
+    comfort_deg: ["Komforttemperatur", "Normalt börvärde när veckoprogrammet är aktivt."],
+    economy_deg: ["Ekonomitemperatur", "Börvärde under schemalagda ekonomiperioder."],
+    adaptive_enable: ["Adaptiv start", "Kan starta värmen tidigare så att komforttemperaturen nås vid utsatt tid."],
+    holiday_deg: ["Semestertemperatur", "Rummets börvärde när semesterläget är aktivt."],
+    setback_deg: ["Sänkningstemperatur", "Rummets börvärde vid central temperatursänkning."],
+    backlight_enable: ["Bakgrundsbelysning", "Tänder termostatens display vid knapptryckning."],
+    keylock_enable: ["Knapplås", "Låser knapparna på termostaten."],
+    restrict_deg_min: ["Lägsta börtemperatur", "Lägsta tillåtna börvärde för rummet."],
+    restrict_deg_max: ["Högsta börtemperatur", "Högsta tillåtna börvärde för rummet."],
+    fireplace_hours: ["Eldstadsfunktionens varaktighet (h)", "Håller golvet varmt en viss tid. Ange 0 för att stänga av."],
+    fireplace_level: ["Värmenivå för eldstadsfunktionen (%)", "Värmenivå medan eldstadsfunktionen är aktiv."],
+    bypass_mode: ["Bypass", "Kan öppna slingan för att upprätthålla flödet när andra slingor är stängda."],
+    bypassOptions: ["Av", "Kontinuerlig", "Tidsstyrd"],
+  },
+  nb: {
+    title: "Gulvvarme", connected: "Tilkoblet", degraded: "Tilkoblingsproblemer",
+    offline: "Frakoblet", last: "Siste vellykkede avlesning", unknown: "Ukjent",
+    system: "System", normal: "Normal", holiday: "Ferie", setback: "Temperatursenking",
+    clock: "LK-klokke", sync: "Synkroniser klokken", apply: "Aktiver modus", end: "Sluttdato for ferie",
+    pump: "Pumperelé", boiler: "Kjelrelé", on: "På", off: "Av",
+    measured: "Romtemperatur", target: "Ønsket temperatur", heat: "Varmer",
+    idle: "Ingen varmebehov", battery: "Batteri", radio: "Radiolinkkvalitet", settings: "Rominnstillinger",
+    schedule: "Ukeprogram", manual: "Midlertidig manuell styring", save: "Lagre",
+    noRooms: "Ingen aktive termostater.", noData: "Venter på data fra LK Webserver.",
+    waiting: "Lagrer…", saved: "Lagret og bekreftet.", error: "Handlingen mislyktes.",
+    dayHelp: "Angi start og slutt for hver spareperiode. La begge feltene stå tomme for å fjerne perioden. Bruk 24:00 for midnatt ved slutten av døgnet.",
+    holidayHelp: "Velg en dato 1–99 dager frem i tid. Modusen gjelder alle rom.",
+    setbackHelp: "Bruker rommenes senkede temperaturer til normalmodus gjenopprettes.",
+    days: ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"],
+    comfort_deg: ["Komforttemperatur", "Vanlig ønsket temperatur når ukeprogrammet er aktivt."],
+    economy_deg: ["Økonomitemperatur", "Ønsket temperatur i planlagte spareperioder."],
+    adaptive_enable: ["Adaptiv start", "Kan starte oppvarmingen tidlig for å nå komforttemperaturen til planlagt tid."],
+    holiday_deg: ["Ferietemperatur", "Ønsket romtemperatur mens feriemodus er aktiv."],
+    setback_deg: ["Senket temperatur", "Ønsket romtemperatur ved sentral temperatursenking."],
+    backlight_enable: ["Bakgrunnsbelysning", "Lyser opp termostatdisplayet ved tastetrykk."],
+    keylock_enable: ["Tastelås", "Låser knappene på termostaten."],
+    restrict_deg_min: ["Laveste ønskede temperatur", "Nedre grense for ønsket romtemperatur."],
+    restrict_deg_max: ["Høyeste ønskede temperatur", "Øvre grense for ønsket romtemperatur."],
+    fireplace_hours: ["Peisfunksjonens varighet (t)", "Holder gulvet varmt en viss tid. Skriv inn 0 for å slå av."],
+    fireplace_level: ["Varmenivå for peisfunksjonen (%)", "Varmenivå mens peisfunksjonen er aktiv."],
+    bypass_mode: ["Bypass", "Kan åpne sløyfen for å opprettholde sirkulasjonen når andre sløyfer er stengt."],
+    bypassOptions: ["Av", "Kontinuerlig", "Tidsstyrt"],
+  },
 };
 
 const settings = [
@@ -129,7 +187,10 @@ class LKFloorHeating extends HTMLElement {
   }
 
   get language() {
-    return (this._hass?.locale?.language ?? this._hass?.language ?? "en").startsWith("fi") ? "fi" : "en";
+    const locale = this._hass?.locale?.language ?? this._hass?.language ?? "en";
+    const language = locale.toLowerCase().split(/[-_]/)[0];
+    if (language === "no") return "nb";
+    return Object.hasOwn(labels, language) ? language : "en";
   }
 
   get t() { return labels[this.language]; }
@@ -182,7 +243,7 @@ class LKFloorHeating extends HTMLElement {
       });
       if (notify) this.message = this.t.saved;
     } catch (error) {
-      this.message = this.language === "fi" ? this.t.error : (error.message || this.t.error);
+      this.message = this.language === "en" ? (error.message || this.t.error) : this.t.error;
     } finally {
       this.busy = false;
       this.render();

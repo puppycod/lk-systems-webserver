@@ -1,7 +1,7 @@
 """Reported pump and boiler relay states."""
 from homeassistant.components.binary_sensor import BinarySensorEntity
 
-from .entity import LKHubEntity
+from .entity import LKHubEntity, LKRoomEntity, discover_rooms
 
 
 async def async_setup_entry(hass, entry, async_add_entities):
@@ -9,6 +9,18 @@ async def async_setup_entry(hass, entry, async_add_entities):
         LKRelay(entry.runtime_data, entry.unique_id, key)
         for key in ("pump_state", "boiler_state")
     ])
+    discover_rooms(entry, async_add_entities, lambda tid: [
+        LKHeatingDemand(entry.runtime_data, entry.unique_id, tid, "heating_demand")
+    ])
+
+
+class LKHeatingDemand(LKRoomEntity, BinarySensorEntity):
+    _attr_translation_key = "heating_demand"
+    _attr_icon = "mdi:radiator"
+
+    @property
+    def is_on(self):
+        return self.coordinator.rooms.get(self.tid, {}).get("heating")
 
 
 class LKRelay(LKHubEntity, BinarySensorEntity):

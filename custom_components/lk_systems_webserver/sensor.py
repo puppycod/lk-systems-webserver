@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 
 from homeassistant.components.sensor import SensorDeviceClass, SensorEntity, SensorEntityDescription, SensorStateClass
-from homeassistant.const import EntityCategory, PERCENTAGE
+from homeassistant.const import EntityCategory, PERCENTAGE, UnitOfTemperature
 
 from .coordinator import SYSTEM_MODES
 from .entity import LKHubEntity, LKRoomEntity, discover_rooms
@@ -18,6 +18,18 @@ ROOM_SENSORS = (
         state_class=SensorStateClass.MEASUREMENT, entity_category=EntityCategory.DIAGNOSTIC,
     ),
 )
+ROOM_TEMPERATURES = (
+    SensorEntityDescription(
+        key="current", translation_key="room_temperature",
+        device_class=SensorDeviceClass.TEMPERATURE, state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+    ),
+    SensorEntityDescription(
+        key="target", translation_key="target_temperature",
+        device_class=SensorDeviceClass.TEMPERATURE,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+    ),
+)
 
 
 async def async_setup_entry(hass, entry, async_add_entities):
@@ -30,6 +42,8 @@ async def async_setup_entry(hass, entry, async_add_entities):
     ])
     discover_rooms(entry, async_add_entities, lambda tid: [
         LKRoomSensor(coordinator, mac, tid, description) for description in ROOM_SENSORS
+    ] + [
+        LKRoomTemperature(coordinator, mac, tid, description) for description in ROOM_TEMPERATURES
     ])
 
 
@@ -45,6 +59,12 @@ class LKRoomSensor(LKRoomEntity, SensorEntity):
             return int(value)
         except (TypeError, ValueError):
             return None
+
+
+class LKRoomTemperature(LKRoomSensor):
+    @property
+    def native_value(self):
+        return self.coordinator.rooms.get(self.tid, {}).get(self.entity_description.key)
 
 
 class LKConnection(LKHubEntity, SensorEntity):
